@@ -17,12 +17,12 @@
       <div class="col s12 m6 offset-m3">
         <div class="card ">
           <div class="card-content">
-            <span class="card-title black-text">Sign In</span>
+            <span class="card-title black-text">Sign Up</span>
             <form action="login.php" method="post">
               <div class='row'>
                 <div class='input-field col s12'>
                   <input class='validate' type='text' name='email' />
-                  <label for='email'>Email/Telp</label>
+                  <label for='email'>No.Telpon</label>
                 </div>
               </div>
 
@@ -43,7 +43,7 @@
             </form>
             <hr>
             <center>
-              <a href="#!">Create account</a>
+              <a href="register.php">Create account</a>
             </center>
           </div>
         </div>
