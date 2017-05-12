@@ -40,6 +40,11 @@
     </div>
   </div>
 </div>
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large red" href="tambah_barang.php">
+    <i class="material-icons">add</i>
+  </a>
+</div>
 
 <!--  Scripts-->
 

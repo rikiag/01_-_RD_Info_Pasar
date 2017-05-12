@@ -10,57 +10,23 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style>
-  #map {
-    width: : 100%;
-    height: 300px;
-  }
-  .center-btn{
-    text-align: center;
-  }
+    #map {
+      width: : 100%;
+      height: 300px;
+    }
+    .center-btn{
+      text-align: center;
+    }
   </style>
 </head>
-<body>
-  <div class="navbar-fixed">
-    <nav class="light-blue lighten-1" role="navigation">
-      <div class="nav-wrapper container">
-        <a href="#" class="brand-logo" data-activates="slide-out">Pasar Rukoh</a>
-        <!-- Menu in Desktop mode -->
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Navbar Link</a></li>
-        </ul>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Navbar Link</a></li>
-        </ul>
-
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
-  </div>
-  <div class="nav-wrapper container">
-    <!-- Menu in Mobile mode -->
-    <ul id="slide-out" class="side-nav">
-      <li>
-        <div class="userView">
-          <div class="background">
-            <img src="images/office.jpg">
-          </div>
-          <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-          <a href="#!name"><span class="white-text name">John Doe</span></a>
-          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-        </div>
-      </li>
-      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-      <li><a class="waves-effect" href="index.html">Home</a></li>
-      <!-- <li><a class="waves-effect" href="#!">Daftar / Login</a></li> -->
-      <li><a class="waves-effect" href="#!">Edit Profil</a></li>
-      <li><a class="waves-effect" href="#!">Jasa Antar Barang</a></li>
-      <li><a class="waves-effect" href="#!">About</a></li>
-      <li><div class="divider"></div></li>
-      <li><a class="waves-effect" href="#!">Logout</a></li>
-    </ul>
-  </div>
-
-
+<body class="grey lighten-4">
+  <?php
+    include 'menu.php';
+    if (isset($_GET['id'])):
+      $id = $_GET['id'];
+      $sql = mysqli_query($con, "SELECT * FROM pasar WHERE id_pasar = $id");
+      $map = mysqli_fetch_object($sql);
+  ?>
   <div class="light-blue">
     <div class="card-tabs">
       <ul class="tabs tabs-fixed-width tabs-transparent">
@@ -71,52 +37,62 @@
     <div class="card-content grey lighten-4">
       <div id="test1">
         <div id="map"></div>
+        <hr>
         <div class="center-btn">
-          <a onclick="myNavFunc(5.575557, 95.360469 )" class="waves-effect waves-light btn-large">Dapatkan rute</a>
+          <a onclick="myNavFunc(<?= $map->lat ?>, <?= $map->long ?>)" class="waves-effect waves-light btn-large">Dapatkan rute</a>
         </div>
       </div>
       <div id="test2">
         <div class="container">
           <div class="section">
-            <!-- <div class="col s12 m7">
-            <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-            <img src="images/sample-1.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-        </div>
-      </div> -->
-      <div class="row">
-        <div class="col s12 m6 l4">
-          <div class="card horizontal">
-            <div class="card-image">
-              <img src="images/office.jpg">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Bawang Merah</p>
+            <div class="row">
+              <?php
+                $sqlData = mysqli_query($con, "SELECT * FROM barang JOIN barang_user ON barang_user.id_barang = barang.id_barang JOIN user ON barang_user.no_telp = user.no_telp JOIN pasar ON pasar.id_pasar = user.id_pasar AND user.id_pasar = $id");
+                while ($data = mysqli_fetch_object($sqlData)):
+              ?>
+              <div class="col s12 m6 l4">
+                <div class="card horizontal">
+                  <div class="card-image">
+                    <img src="images/<?= $data->foto_barang ?>">
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                      <p><?= $data->nama_barang ?></p>
+                    </div>
+                    <div class="card-action">
+                      <a href="barang.php?id_barang=<?= $data->id_barang; ?>">Rp. <?= number_format($data->harga_sekarang,2,",","."); ?></a>
+                      <?php
+                        if ($data->harga_sekarang > $data->harga_sebelumnya) {
+                          echo '<i class="material-icons">call_made</i>';
+                        }
+                        else{
+                          echo '<i class="material-icons">call_received</i>';
+                        }
+                      ?>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="card-action">
-                <a href="barang.html">Rp. 18.000,00</a>
-              </div>
+              <?php endwhile; ?>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
-</div>
+  <?php else: ?>
+    <br>
+    <center><h1>No Data</h1></center>
+  <?php endif; ?>
 
-</div>
-</div>
-
-<script type="text/javascript"> 
-function myNavFunc(a, b){ 
+  <script type="text/javascript"> 
+    function myNavFunc(a, b){ 
   // If it's an iPhone.. 
   if( (navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1)) 
-  window.open("maps://maps.google.com/maps?daddr="+a+","+b+"&ll="); 
+    window.open("maps://maps.google.com/maps?daddr="+a+","+b+"&ll="); 
   else 
-  window.open("http://maps.google.com/maps?daddr="+a+","+b+"&ll="); 
+    window.open("http://maps.google.com/maps?daddr="+a+","+b+"&ll="); 
 } 
 </script>
 
@@ -124,20 +100,20 @@ function myNavFunc(a, b){
 
 <script>
 
-function initMap() {
-  var myLatLng = {lat: 5.575557, lng: 95.360469};
+  function initMap() {
+    var myLatLng = {lat: <?= $map->lat ?>, lng: <?= $map->long ?>};
 
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 16,
-    center: myLatLng
-  });
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 16,
+      center: myLatLng
+    });
 
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Hello World!'
-  });
-}
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Hello World!'
+    });
+  }
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaZXQpHkUWpZOFFBPQScY8UE0waqvsXcE&v=3.exp&libraries=places&callback=initMap"
