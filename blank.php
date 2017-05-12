@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,26 +78,6 @@
             </div>
           </div>
         </div>
-		<!--   Icon Section   -->
-        <div class="col s12 m6 l4">
-          <div class="card horizontal">
-            <div class="card-stacked waves-effect">
-              <a href="rukoh.html"><div class="card-content">
-                <h5>Pasar Peunayong</h5>
-              </div></a>
-            </div>
-          </div>
-        </div>
-		<!--   Icon Section   -->
-        <div class="col s12 m6 l4">
-          <div class="card horizontal">
-            <div class="card-stacked waves-effect">
-              <a href="rukoh.html"><div class="card-content">
-                <h5>Pasar Ketapang</h5>
-              </div></a>
-            </div>
-          </div>
-        </div>
 
       </div>
     </div>
@@ -127,9 +106,3 @@ Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">M
 
 </body>
 </html>
-=======
-<html>
-<head>
-<title>Membuat From Edit Data dengan PHP</title>
-<link href="style.css"
->>>>>>> Edit_Profil
