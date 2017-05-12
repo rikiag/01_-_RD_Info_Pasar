@@ -25,7 +25,6 @@
                   <label for='email'>Email/Telp</label>
                 </div>
               </div>
-
               <div class='row'>
                 <div class='input-field col s12'>
                   <input class='validate' type='password' name='password' />
