@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<?php
-mysql_connect('localhost','root','');
-mysql_select_db('gambar');
-?>
-=======
-<?php 
-
-include "database.php"; 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,25 +48,40 @@ include "database.php";
             </div>
           </div>
         </div>
-        
-		<?php
-        $sql = mysqli_query($con,"SELECT * FROM `pasar`");
-        while ($data = mysqli_fetch_object($sql)):
-		
-          ?>
-		   <div class="card-stacked">
+        <!--   Icon Section   -->
+        <div class="col s12 m6 l4">
           <div class="card horizontal">
-              <p><?php echo $data->alamat_pasar; ?></p>
+            <div class="card-stacked waves-effect">
+              <a href="rukoh.html"><div class="card-content">
+                <h5>Pasar Lamnyong</h5>
+              </div></a>
             </div>
-			
-            <div class="card-stacked">
-              <div class="card-content">
-                <p><?php echo $data->nama_pasar; ?></p>
-              </div>
-			  </div>
-			  </div>
-			  <?php endwhile; ?>
- 
+          </div>
+        </div>
+        <!--   Icon Section   -->
+        <div class="col s12 m6 l4">
+          <div class="card horizontal">
+            <div class="card-stacked waves-effect">
+              <a href="rukoh.html"><div class="card-content">
+                <h5>Pasar Lambaro</h5>
+              </div></a>
+            </div>
+          </div>
+        </div>
+        <!--   Icon Section   -->
+        <div class="col s12 m6 l4">
+          <div class="card horizontal">
+            <div class="card-stacked waves-effect">
+              <a href="rukoh.html"><div class="card-content">
+                <h5>Pasar Neusu</h5>
+              </div></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <!-- <footer class="page-footer light-blue">
   <div class="container">
@@ -102,5 +106,3 @@ Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">M
 
 </body>
 </html>
-
->>>>>>> shinta

@@ -4,10 +4,14 @@
 --
 -- Host: 127.0.0.1
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- Generation Time: 09 Mei 2017 pada 16.38
 =======
 -- Generation Time: 09 Mei 2017 pada 07.34
 >>>>>>> amanda
+=======
+-- Generation Time: 09 Mei 2017 pada 07.34
+>>>>>>> shinta
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -44,6 +48,7 @@ CREATE TABLE `barang` (
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `foto_barang`, `harga_sekarang`, `harga_sebelumnya`) VALUES
 <<<<<<< HEAD
+<<<<<<< HEAD
 (1, 'cabai hijau', 'cabai-hijau.jpg', 5000, 0),
 (2, 'bawang merah', 'bawang-merah.jpg', 2000, 0),
 (3, 'cabai hijau', 'cabai-hijau-1.jpg', 5500, 5000);
@@ -52,6 +57,11 @@ INSERT INTO `barang` (`id_barang`, `nama_barang`, `foto_barang`, `harga_sekarang
 (2, 'bawang merah', 'office.jpg', 2000, 0),
 (3, 'cabai hijau', 'office.jpg', 5500, 5000);
 >>>>>>> amanda
+=======
+(1, 'cabai hijau', 'office.jpg', 5000, 0),
+(2, 'bawang merah', 'office.jpg', 2000, 0),
+(3, 'cabai hijau', 'office.jpg', 5500, 5000);
+>>>>>>> shinta
 
 -- --------------------------------------------------------
 
@@ -120,10 +130,14 @@ CREATE TABLE `user` (
   `level` int(1) NOT NULL,
   `password` varchar(50) NOT NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
   `id_pasar` int(11) DEFAULT '0'
 =======
   `id_pasar` int(11) NOT NULL
 >>>>>>> amanda
+=======
+  `id_pasar` int(11) NOT NULL
+>>>>>>> shinta
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -133,9 +147,12 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`no_telp`, `nama`, `alamat`, `level`, `password`, `id_pasar`) VALUES
 ('08123', 'Riki', 'rukoh', 1, '08123', 1),
 <<<<<<< HEAD
+<<<<<<< HEAD
 ('081234', 'Riki', 'rukoh', 1, '08123', 0),
 =======
 >>>>>>> amanda
+=======
+>>>>>>> shinta
 ('0822', 'Ilham', 'Banda Aceh', 1, '0822', 2);
 
 --
@@ -174,10 +191,14 @@ ALTER TABLE `pasar`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`no_telp`),
 <<<<<<< HEAD
+<<<<<<< HEAD
   ADD KEY `user_ibfk_1` (`id_pasar`);
 =======
   ADD KEY `id_pasar` (`id_pasar`);
 >>>>>>> amanda
+=======
+  ADD KEY `id_pasar` (`id_pasar`);
+>>>>>>> shinta
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -216,14 +237,20 @@ ALTER TABLE `komentar`
   ADD CONSTRAINT `komentar_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> shinta
 --
 -- Ketidakleluasaan untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`id_pasar`) REFERENCES `pasar` (`id_pasar`);
 
+<<<<<<< HEAD
 >>>>>>> amanda
+=======
+>>>>>>> shinta
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
