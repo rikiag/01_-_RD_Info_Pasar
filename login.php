@@ -17,7 +17,7 @@
       <div class="col s12 m6 offset-m3">
         <div class="card ">
           <div class="card-content">
-            <span class="card-title black-text">Sign Up</span>
+            <span class="card-title black-text">Sign In</span>
             <form action="login.php" method="post">
               <div class='row'>
                 <div class='input-field col s12'>
@@ -32,7 +32,7 @@
                   <label for='password'>Password</label>
                 </div>
                 <label style='float: right;'>
-                  <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+                  <a class='pink-text' href='forgot.php'><b>Forgot Password?</b></a>
                 </label>
               </div>
               <center>
