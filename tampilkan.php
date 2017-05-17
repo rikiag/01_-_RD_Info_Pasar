@@ -11,6 +11,45 @@
   
 </head>
 <body>
+<div class="navbar-fixed">
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo" data-activates="slide-out">Pasar Rukoh</a>
+        <!-- Menu in Desktop mode -->
+        <ul class="right hide-on-med-and-down">
+          <li><a href="editor.php">upload barang</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+  <div class="nav-wrapper container">
+    <!-- Menu in Mobile mode -->
+    <ul id="slide-out" class="side-nav">
+      <li>
+        <div class="userView">
+          <div class="background">
+            <img src="images/office.jpg">
+          </div>
+          <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+          <a href="#!name"><span class="white-text name">John Doe</span></a>
+          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div>
+      </li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      <li><a class="waves-effect" href="index.html">Home</a></li>
+      <!-- <li><a class="waves-effect" href="#!">Daftar / Login</a></li> -->
+      <li><a class="waves-effect" href="#!">Edit Profil</a></li>
+      <li><a class="waves-effect" href="#!">Jasa Antar Barang</a></li>
+      <li><a class="waves-effect" href="#!">About</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="waves-effect" href="#!">Logout</a></li>
+    </ul>
+  </div>
 <div class="light-blue">
     <div class="card-tabs">
       <ul class="tabs tabs-fixed-width tabs-transparent">
@@ -20,6 +59,10 @@
     <div class="card-content grey lighten-4">
     <center>
     <br><br><br>
+    <div class="row">
+              <div class="col s12 m6 l4">
+                  <div class="card horizontal">
+                    <div class="card-image">
 
 
 <?php 
