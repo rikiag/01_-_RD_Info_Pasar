@@ -39,67 +39,42 @@
 
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m6 l4">
+        <div class="card">
+  <div class="card-header">
+    <img src="images/jasa antar barang.jpg"/>
+  </div>
+  <div class="card-content">
+    <h3>AMIRULLAH ISMAIL</h3>
+    <h4>JEULINGKE-BANDA ACEH</h4>
+	
+    
+  <div class="card-footer">
+    <ul>
+      <li>
+        <a href="#"><i class="fa fa-codepen"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-stack-overflow"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-github"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
           <div class="card horizontal">
             <div class="card-stacked waves-effect">
               <a href="rukoh.html"><div class="card-content">
-                <h5>Pasar Rukoh</h5>
+                <h5>PASAR RUKOH</h5>
               </div></a>
             </div>
           </div>
         </div>
-        <!--   Icon Section   -->
-        <div class="col s12 m6 l4">
-          <div class="card horizontal">
-            <div class="card-stacked waves-effect">
-              <a href="rukoh.html"><div class="card-content">
-                <h5>Pasar Lamnyong</h5>
-              </div></a>
-            </div>
-          </div>
-        </div>
-        <!--   Icon Section   -->
-        <div class="col s12 m6 l4">
-          <div class="card horizontal">
-            <div class="card-stacked waves-effect">
-              <a href="rukoh.html"><div class="card-content">
-                <h5>Pasar Lambaro</h5>
-              </div></a>
-            </div>
-          </div>
-        </div>
-        <!--   Icon Section   -->
-        <div class="col s12 m6 l4">
-          <div class="card horizontal">
-            <div class="card-stacked waves-effect">
-              <a href="rukoh.html"><div class="card-content">
-                <h5>Pasar Neusu</h5>
-              </div></a>
-            </div>
-          </div>
-        </div>
-
+ 
       </div>
     </div>
   </div>
 
-  <!-- <footer class="page-footer light-blue">
-  <div class="container">
-  <div class="row">
-  <div class="col l12 s12">
-  <h5 class="white-text">Kelompok 1</h5>
-</div>
-</div>
-</div>
-<div class="footer-copyright">
-<div class="container">
-Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-</div>
-</div>
-</footer> -->
-
-
-<!--  Scripts-->
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>

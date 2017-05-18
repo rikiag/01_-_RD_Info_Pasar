@@ -1,8 +1,3 @@
-<?php 
-
-include "database.php"; 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,30 +41,3 @@ include "database.php";
 
 </body>
 </html>
-
- 
-
-  <!-- <footer class="page-footer light-blue">
-  <div class="container">
-  <div class="row">
-  <div class="col l12 s12">
-  <h5 class="white-text">Kelompok 1</h5>
-</div>
-</div>
-</div>
-<div class="footer-copyright">
-<div class="container">
-Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-</div>
-</div>
-</footer> -->
-
-
-<!--  Scripts-->
-<script src="js/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
-
-</body>
-</html>
-
