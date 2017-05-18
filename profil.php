@@ -41,11 +41,12 @@
       <div class="row">
         <div class="card">
   <div class="card-header">
-    <img src="images/sayuran.jpg"/>
+    <img src="images/jasa antar barang.jpg"/>
   </div>
   <div class="card-content">
-    <h3>RUDIANTO</h3>
-    <h4>JEULINGKE </h4>
+    <h3>AMIRULLAH ISMAIL</h3>
+    <h4>JEULINGKE-BANDA ACEH</h4>
+	
     
   <div class="card-footer">
     <ul>
@@ -64,7 +65,7 @@
           <div class="card horizontal">
             <div class="card-stacked waves-effect">
               <a href="rukoh.html"><div class="card-content">
-                <h5>Pasar Rukoh</h5>
+                <h5>PASAR RUKOH</h5>
               </div></a>
             </div>
           </div>
