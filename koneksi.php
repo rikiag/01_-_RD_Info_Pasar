@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 mysql_connect('localhost','root','');
 mysql_select_db('gambar');
@@ -104,3 +105,9 @@ Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">M
 </html>
 
 >>>>>>> shinta
+=======
+<?php
+mysql_connect('localhost','root','');
+mysql_select_db('gambar');
+?>
+>>>>>>> komentar

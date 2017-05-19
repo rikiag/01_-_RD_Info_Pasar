@@ -3,19 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
--- Generation Time: 09 Mei 2017 pada 16.38
-=======
 -- Generation Time: 09 Mei 2017 pada 07.34
->>>>>>> amanda
-=======
--- Generation Time: 09 Mei 2017 pada 07.34
->>>>>>> shinta
-=======
--- Generation Time: 17 Mei 2017 pada 10.36
->>>>>>> komentar
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -51,35 +39,9 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `foto_barang`, `harga_sekarang`, `harga_sebelumnya`) VALUES
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-(1, 'cabai hijau', 'cabai-hijau.jpg', 5000, 0),
-(2, 'bawang merah', 'bawang-merah.jpg', 2000, 0),
-(3, 'cabai hijau', 'cabai-hijau-1.jpg', 5500, 5000);
-=======
 (1, 'cabai hijau', 'office.jpg', 5000, 0),
 (2, 'bawang merah', 'office.jpg', 2000, 0),
 (3, 'cabai hijau', 'office.jpg', 5500, 5000);
->>>>>>> amanda
-=======
-(1, 'cabai hijau', 'office.jpg', 5000, 0),
-(2, 'bawang merah', 'office.jpg', 2000, 0),
-(3, 'cabai hijau', 'office.jpg', 5500, 5000);
->>>>>>> shinta
-=======
-(1, 'cabai hijau', 'Screenshot (42).png', 4500, 5000),
-(2, 'bawang merah', 'bawang-merah.jpg', 2000, 2500),
-(3, 'cabai hijau', 'cabai-hijau-1.jpg', 5500, 5000),
-(4, 'telur', 'telur.jpg', 1500, 0),
-(5, 'ayam', '', 45000, 0),
-(7, 'kopi', '4000', 0, 0),
-(8, 'susu', '5000', 0, 0),
-(9, 'teh', '5000', 0, 0),
-(10, 'ksdjh', '10000', 0, 0),
-(11, 'bayam', 'Screenshot (50).png', 2500, 0),
-(12, 'Riki', '', 0, 0);
->>>>>>> komentar
 
 -- --------------------------------------------------------
 
@@ -99,14 +61,7 @@ CREATE TABLE `barang_user` (
 INSERT INTO `barang_user` (`no_telp`, `id_barang`) VALUES
 ('0822', 1),
 ('0822', 2),
-<<<<<<< HEAD
 ('08123', 3);
-=======
-('08123', 3),
-('08123', 10),
-('08123', 11),
-('08123', 12);
->>>>>>> komentar
 
 -- --------------------------------------------------------
 
@@ -117,28 +72,9 @@ INSERT INTO `barang_user` (`no_telp`, `id_barang`) VALUES
 CREATE TABLE `komentar` (
   `id_komentar` int(11) NOT NULL,
   `isi_komentar` text NOT NULL,
-<<<<<<< HEAD
   `id_barang` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-=======
-  `id_barang` int(11) NOT NULL,
-  `no_telp` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `komentar`
---
-
-INSERT INTO `komentar` (`id_komentar`, `isi_komentar`, `id_barang`, `no_telp`) VALUES
-(1, 'komentar 1', 2, '0822'),
-(2, 'komentar 2', 2, '08123'),
-(3, 'komentar barang lain', 1, '08123'),
-(6, 'balasan', 2, '0822'),
-(7, 'yoo, whats up ??', 2, '0822'),
-(13, 'ini foto cabe rawit, bukan cabe merah.', 3, '0822');
-
->>>>>>> komentar
 -- --------------------------------------------------------
 
 --
@@ -159,11 +95,7 @@ CREATE TABLE `pasar` (
 
 INSERT INTO `pasar` (`id_pasar`, `nama_pasar`, `alamat_pasar`, `lat`, `long`) VALUES
 (1, 'Pasar Tradisional Rukoh', 'Rukoh, Syiah Kuala, Kota Banda Aceh, Aceh 24415', '5.575377', '95.360449'),
-<<<<<<< HEAD
 (2, 'Pasar Sayur Lamnyong', 'Lamgugob, Syiah Kuala, Kota Banda Aceh, Aceh 24415', '5.575614', '95.354451');
-=======
-(2, 'Pasar Sayur Lamnyong', 'Jl. Teuku Nyak Arief No.23, Lamgugob, Syiah Kuala, Kota Banda Aceh, Aceh 24415, Indonesia', '5.57559263', '95.3544724');
->>>>>>> komentar
 
 -- --------------------------------------------------------
 
@@ -175,49 +107,18 @@ CREATE TABLE `user` (
   `no_telp` varchar(15) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `alamat` text NOT NULL,
-<<<<<<< HEAD
   `level` int(1) NOT NULL,
   `password` varchar(50) NOT NULL,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  `id_pasar` int(11) DEFAULT '0'
-=======
   `id_pasar` int(11) NOT NULL
->>>>>>> amanda
-=======
-  `id_pasar` int(11) NOT NULL
->>>>>>> shinta
-=======
-  `foto` varchar(50) NOT NULL,
-  `level` int(1) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `id_pasar` int(11) DEFAULT '0'
->>>>>>> komentar
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `user`
 --
 
-<<<<<<< HEAD
 INSERT INTO `user` (`no_telp`, `nama`, `alamat`, `level`, `password`, `id_pasar`) VALUES
 ('08123', 'Riki', 'rukoh', 1, '08123', 1),
-<<<<<<< HEAD
-<<<<<<< HEAD
-('081234', 'Riki', 'rukoh', 1, '08123', 0),
-=======
->>>>>>> amanda
-=======
->>>>>>> shinta
 ('0822', 'Ilham', 'Banda Aceh', 1, '0822', 2);
-=======
-INSERT INTO `user` (`no_telp`, `nama`, `alamat`, `foto`, `level`, `password`, `id_pasar`) VALUES
-('08123', 'Riki Agusnaidi', 'rukoh', '', 1, '08123', 1),
-('081234', 'Riki', 'rukoh', '', 1, '08123', 0),
-('0822', 'Ilham', 'Banda Aceh', '', 1, '0822', 2),
-('1234', 'yusran', 'peurada', 'images/BLS-01.jpg', 2, '1234', 0),
-('45', 'andre', 'rukoh', 'images/naruto_shippuden_sasuke.png', 3, '45', 0);
->>>>>>> komentar
 
 --
 -- Indexes for dumped tables
@@ -241,12 +142,7 @@ ALTER TABLE `barang_user`
 --
 ALTER TABLE `komentar`
   ADD PRIMARY KEY (`id_komentar`),
-<<<<<<< HEAD
   ADD KEY `id_barang` (`id_barang`);
-=======
-  ADD KEY `id_barang` (`id_barang`),
-  ADD KEY `no_telp` (`no_telp`);
->>>>>>> komentar
 
 --
 -- Indexes for table `pasar`
@@ -259,19 +155,7 @@ ALTER TABLE `pasar`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`no_telp`),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ADD KEY `user_ibfk_1` (`id_pasar`);
-=======
   ADD KEY `id_pasar` (`id_pasar`);
->>>>>>> amanda
-=======
-  ADD KEY `id_pasar` (`id_pasar`);
->>>>>>> shinta
-=======
-  ADD KEY `user_ibfk_1` (`id_pasar`);
->>>>>>> komentar
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -281,20 +165,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-<<<<<<< HEAD
   MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-=======
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
->>>>>>> komentar
 --
 -- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
-<<<<<<< HEAD
   MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT;
-=======
-  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
->>>>>>> komentar
 --
 -- AUTO_INCREMENT for table `pasar`
 --
@@ -315,29 +191,14 @@ ALTER TABLE `barang_user`
 -- Ketidakleluasaan untuk tabel `komentar`
 --
 ALTER TABLE `komentar`
-<<<<<<< HEAD
   ADD CONSTRAINT `komentar_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> shinta
 --
 -- Ketidakleluasaan untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`id_pasar`) REFERENCES `pasar` (`id_pasar`);
 
-<<<<<<< HEAD
->>>>>>> amanda
-=======
->>>>>>> shinta
-=======
-  ADD CONSTRAINT `komentar_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`),
-  ADD CONSTRAINT `komentar_ibfk_2` FOREIGN KEY (`no_telp`) REFERENCES `user` (`no_telp`);
-
->>>>>>> komentar
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

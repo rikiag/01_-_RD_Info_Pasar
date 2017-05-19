@@ -20,7 +20,11 @@
     <div class="card-content grey lighten-4">
     <center>
     <br><br><br>
-
+    <div class="row">
+              <div class="col s12 m6 l4">
+                  <div class="card horizontal">
+                    <div class="card-image">
+<center>
 
 <?php 
 include "database.php"; 
@@ -31,17 +35,32 @@ while ($data = mysqli_fetch_array($tampil)){
 
 echo "<img src='upload/".$data['foto_barang']."' width='372px' height='243px'/>";
 echo "</br>";
-<<<<<<< HEAD
 echo 'harga: ';
-=======
-echo 'Nama Barang: ';
-echo $data['nama_barang'];
-echo '<br>';
-echo 'Harga: ';
->>>>>>> komentar
 echo $data['harga_sekarang'];
 }
 ?>
+</div>
+<div class="card-stacked">
+                          <div class="card-content">
+                          
+                          </div>
+                            <div class="card-action">
+
+<?php 
+$sql = "select harga_sekarang FROM barang WHERE id_barang IN(SELECT MAX(id_barang) FROM barang)";
+$tampil = mysqli_query($con, $sql);
+while ($data = mysqli_fetch_array($tampil)){
+// Tampilkan Gambar
+
+
+
+}
+?>
+                      
+                          
+                            </div>
+                      </div>
+                  </div>
 </center>
 
 </script>

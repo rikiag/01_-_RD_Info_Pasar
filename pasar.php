@@ -21,11 +21,19 @@
 </head>
 <body class="grey lighten-4">
   <?php
+<<<<<<< HEAD
     include 'menu.php';
     if (isset($_GET['id'])):
       $id = $_GET['id'];
       $sql = mysqli_query($con, "SELECT * FROM pasar WHERE id_pasar = $id");
       $map = mysqli_fetch_object($sql);
+=======
+  include 'menu.php';
+  if (isset($_GET['id'])):
+    $id = $_GET['id'];
+  $sql = mysqli_query($con, "SELECT * FROM pasar WHERE id_pasar = $id");
+  $map = mysqli_fetch_object($sql);
+>>>>>>> komentar
   ?>
   <div class="light-blue">
     <div class="card-tabs">
@@ -47,9 +55,15 @@
           <div class="section">
             <div class="row">
               <?php
+<<<<<<< HEAD
                 $sqlData = mysqli_query($con, "SELECT * FROM barang JOIN barang_user ON barang_user.id_barang = barang.id_barang JOIN user ON barang_user.no_telp = user.no_telp JOIN pasar ON pasar.id_pasar = user.id_pasar AND user.id_pasar = $id");
                 while ($data = mysqli_fetch_object($sqlData)):
               ?>
+=======
+              $sqlData = mysqli_query($con, "SELECT * FROM barang JOIN barang_user ON barang_user.id_barang = barang.id_barang JOIN user ON barang_user.no_telp = user.no_telp JOIN pasar ON pasar.id_pasar = user.id_pasar AND user.id_pasar = $id");
+              while ($data = mysqli_fetch_object($sqlData)):
+                ?>
+>>>>>>> komentar
               <div class="col s12 m6 l4">
                 <div class="card horizontal">
                   <div class="card-image">
@@ -62,17 +76,27 @@
                     <div class="card-action">
                       <a href="barang.php?id_barang=<?= $data->id_barang; ?>">Rp. <?= number_format($data->harga_sekarang,2,",","."); ?></a>
                       <?php
+<<<<<<< HEAD
                         if ($data->harga_sekarang > $data->harga_sebelumnya) {
                           echo '<i class="material-icons">call_made</i>';
                         }
                         else{
                           echo '<i class="material-icons">call_received</i>';
                         }
+=======
+                      if ($data->harga_sekarang > $data->harga_sebelumnya) {
+                        echo '<i class="material-icons">call_made</i>';
+                      }
+                      else{
+                        echo '<i class="material-icons">call_received</i>';
+                      }
+>>>>>>> komentar
                       ?>
                     </div>
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
               <?php endwhile; ?>
             </div>
           </div>
@@ -88,6 +112,23 @@
 
   <script type="text/javascript"> 
     function myNavFunc(a, b){ 
+=======
+            <?php endwhile; ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<?php else: ?>
+  <br>
+  <center><h1>No Data</h1></center>
+<?php endif; ?>
+
+<script type="text/javascript"> 
+  function myNavFunc(a, b){ 
+>>>>>>> komentar
   // If it's an iPhone.. 
   if( (navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1)) 
     window.open("maps://maps.google.com/maps?daddr="+a+","+b+"&ll="); 

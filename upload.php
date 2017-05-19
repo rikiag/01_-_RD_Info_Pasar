@@ -47,7 +47,11 @@ include 'database.php';
 if (isset($_POST['submit'])){
  $fileName = $_FILES['fileToUpload']['name'];
   // Simpan ke Database
+<<<<<<< HEAD
   $sql = "insert into barang (foto_barang, harga_sekarang) values ('$fileName', '".$_POST['harga']."')";
+=======
+  $sql = "insert into barang (foto_barang, nama_barang, harga_sekarang) values ('$fileName', '".$_POST['nama']."','".$_POST['harga']."')";
+>>>>>>> komentar
   mysqli_query($con, $sql);
   } 
 
