@@ -31,7 +31,7 @@
                 <p><?php echo $data->nama_barang; ?></p>
               </div>
               <div class="card-action">
-                <a href="barang.php?id_barang=<?php echo $data->id_barang; ?>">Rp. <?php echo number_format($data->harga_sekarang,2,",","."); ?></a>
+                <a href="edit_barang.php?id_barang=<?php echo $data->id_barang; ?>">Rp. <?php echo number_format($data->harga_sekarang,2,",","."); ?></a>
               </div>
             </div>
           </div>

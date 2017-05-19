@@ -28,18 +28,23 @@ session_start();
           <div class="background">
             <img src="images/office.jpg">
           </div>
-          <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-          <a href="#!name"><span class="white-text name"><?= $_SESSION['nama']; ?></span></a>
-          <a href="#!email"><span class="white-text email"><?= $_SESSION['no_telp']; ?></span></a>
+          <a href="edit.php"><img class="circle" src="images/yuna.jpg"></a>
+          <a href="edit.php"><span class="white-text name"><?= $_SESSION['nama']; ?></span></a>
+          <a href="edit.php"><span class="white-text email"><?= $_SESSION['no_telp']; ?></span></a>
         </div>
       </li>
       <li><a class="waves-effect" href="index.php">Home</a></li>
       <?php if ($_SESSION['level'] == 1): ?>
         <li><a class="waves-effect" href="barang_penjual.php">Barang Saya</a></li>
+        <li><a class="waves-effect" href="tambah_barang.php">Tambah Barang</a></li>
       <?php endif ?>
-      <li><a class="waves-effect" href="#!">Edit Profil</a></li>
-      <li><a class="waves-effect" href="#!">Jasa Antar Barang</a></li>
-      <li><a class="waves-effect" href="#!">About</a></li>
+      <?php if ($_SESSION['level'] == 2): ?>
+        <li><a class="waves-effect" href="jasa_antar.php">Jasa Antar Barang</a></li>
+      <?php endif ?>
+      <?php if ($_SESSION['level'] == 3): ?>
+        <li><a class="waves-effect" href="rutekerumah.php">Antar Barang</a></li>
+      <?php endif ?>
+      <li><a class="waves-effect" href="about.php">About</a></li>
       <!-- MENU LOGIN LOGOUT -->
       <li><div class="divider"></div></li>
       <?php if (isset($_SESSION['no_telp'])): ?>

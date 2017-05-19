@@ -78,7 +78,7 @@
       $_SESSION['level']    = $data->level;
       $_SESSION['id_pasar'] = $data->id_pasar;
       $_SESSION['status']   = 'login';
-      header('location:barang_penjual.php');
+      header('location:index.php');
     }
   }
 ?>
