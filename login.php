@@ -74,6 +74,7 @@
       session_start();
       $_SESSION['no_telp']  = $data->no_telp;
       $_SESSION['nama']     = $data->nama;
+      $_SESSION['foto']     = $data->foto;
       $_SESSION['alamat']   = $data->alamat;
       $_SESSION['level']    = $data->level;
       $_SESSION['id_pasar'] = $data->id_pasar;
