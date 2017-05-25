@@ -26,7 +26,7 @@
         <a href="#" class="brand-logo" data-activates="slide-out">Pasar Rukoh</a>
         <!-- Menu in Desktop mode -->
         <ul class="right hide-on-med-and-down">
-          <li><a href="editor.php">upload barang</a></li>
+          <li><a href="#">Navbar Link</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
           <li><a href="#">Navbar Link</a></li>
@@ -65,7 +65,6 @@
       <ul class="tabs tabs-fixed-width tabs-transparent">
         <li class="tab"><a class="active" href="#test1">Info</a></li>
         <li class="tab"><a href="#test2">Barang</a></li>
-        <li class="tab"><a href="#test3">Harga Terbaru</a></li>
       </ul>
     </div>
     <div class="card-content grey lighten-4">
@@ -77,49 +76,39 @@
       </div>
       <div id="test2">
         <div class="container">
-          	<div class="section">
-           
-            	<div class="row">
-        			<div class="col s12 m6 l4">
-          				<div class="card horizontal">
-            				<div class="card-image">
-              				<img src="images/office.jpg">
-            				</div>
-            					<div class="card-stacked">
-              						<div class="card-content">
-                					<p>Bawang Merah</p>
-              						</div>
-              							<div class="card-action">
-                						<a href="barang.html">Rp. 18.000,00</a>
-              							</div>
-            					</div>
-          				</div>
-        			</div>
-      			</div>
-    	  	</div>
-    
-    			<div class="row">
-        			<div class="col s12 m6 l4">
-          				<div class="card horizontal">
-            				<div class="card-image">
-              				<img src="images/office.jpg">
-            				</div>
-            					<div class="card-stacked">
-              						<div class="card-content">
-                					<p>Bawang Putih</p>
-              						</div>
-              							<div class="card-action">
-                						<a href="barang.html">Rp. 12.000,00</a>
-              							</div>
-              					</div>
-             			</div>
-           			</div>
-          		</div>
+          <div class="section">
+            <!-- <div class="col s12 m7">
+            <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+            <img src="images/sample-1.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
         </div>
-       </div>
+      </div> -->
+      <div class="row">
+        <div class="col s12 m6 l4">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="images/office.jpg">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Bawang Merah</p>
+              </div>
+              <div class="card-action">
+                <a href="barang.html">Rp. 18.000,00</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+</div>
+</div>
 
-<<<<<<< HEAD:rutejasa.php
 <script type="text/javascript"> 
 function myNavFunc(a, b){ 
   // If it's an iPhone.. 
@@ -128,17 +117,6 @@ function myNavFunc(a, b){
   else 
   window.open("http://maps.google.com/maps?daddr="+a+","+b+"&ll="); 
 } 
-=======
-        <div id="test3">
-        <a href="tampilkan.php">klik disini untuk harga terbaru</a>
-            				
-        </div>
-        
-            
-<!--  Scripts-->
-<script type="text/javascript">
-console.log("Uchiha Hana Nan");
->>>>>>> komentar:rukoh.html
 </script>
 
 <!--  Scripts-->
@@ -168,9 +146,10 @@ async defer></script>
 <script src="js/init.js"></script>
 
 <center><h1>Jasa Antar</h1></center>
-		<form action="hasilrute.php"method="post">
-			username : <input type="text" name="username" required><br>
-			address  : <input type="text" name="address" required><br>
+		<form action="hasilrutekirim.php"method="post">
+			username          : <input type="text" name="username" required><br>
+			address user      : <input type="text" name="address" required><br>
+			address pengiriman: <input type="text" name="addresstuju" required><br>
 			
 			<input type="submit" name="submit" value="submit">
 		</form>
