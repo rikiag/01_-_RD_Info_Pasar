@@ -219,7 +219,6 @@
       });
       map.fitBounds(bounds);
     });
-    // [END region_getplaces]
   }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaZXQpHkUWpZOFFBPQScY8UE0waqvsXcE&v=3.exp&libraries=places&callback=initAutocomplete"
