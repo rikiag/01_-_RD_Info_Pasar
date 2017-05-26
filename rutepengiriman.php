@@ -26,12 +26,11 @@
         <a href="#" class="brand-logo" data-activates="slide-out">Pasar Rukoh</a>
         <!-- Menu in Desktop mode -->
         <ul class="right hide-on-med-and-down">
-          <li><a href="editor.php">upload barang</a></li>
+          <li><a href="#">Navbar Link</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
           <li><a href="#">Navbar Link</a></li>
         </ul>
-
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
     </nav>
@@ -66,70 +65,62 @@
       <ul class="tabs tabs-fixed-width tabs-transparent">
         <li class="tab"><a class="active" href="#test1">Info</a></li>
         <li class="tab"><a href="#test2">Barang</a></li>
-        <li class="tab"><a href="#test3">Harga Terbaru</a></li>
       </ul>
     </div>
     <div class="card-content grey lighten-4">
       <div id="test1">
         <div id="map"></div>
         <div class="center-btn">
-          <a class="waves-effect waves-light btn-large">Dapatkan rute</a>
+          <a onclick="myNavFunc(5.575557, 95.360469 )" class="waves-effect waves-light btn-large">Dapatkan rute</a>
         </div>
       </div>
       <div id="test2">
         <div class="container">
-          	<div class="section">
-           
-            	<div class="row">
-        			<div class="col s12 m6 l4">
-          				<div class="card horizontal">
-            				<div class="card-image">
-              				<img src="images/office.jpg">
-            				</div>
-            					<div class="card-stacked">
-              						<div class="card-content">
-                					<p>Bawang Merah</p>
-              						</div>
-              							<div class="card-action">
-                						<a href="barang.html">Rp. 18.000,00</a>
-              							</div>
-            					</div>
-          				</div>
-        			</div>
-      			</div>
-    	  	</div>
-    
-    			<div class="row">
-        			<div class="col s12 m6 l4">
-          				<div class="card horizontal">
-            				<div class="card-image">
-              				<img src="images/office.jpg">
-            				</div>
-            					<div class="card-stacked">
-              						<div class="card-content">
-                					<p>Bawang Putih</p>
-              						</div>
-              							<div class="card-action">
-                						<a href="barang.html">Rp. 12.000,00</a>
-              							</div>
-              					</div>
-             			</div>
-           			</div>
-          		</div>
+          <div class="section">
+            <!-- <div class="col s12 m7">
+            <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+            <img src="images/sample-1.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
         </div>
-       </div>
-
-
-        <div id="test3">
-        <a href="tampilkan.php">klik disini untuk harga terbaru</a>
-            				
+      </div> -->
+      <div class="row">
+        <div class="col s12 m6 l4">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="images/office.jpg">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Bawang Merah</p>
+              </div>
+              <div class="card-action">
+                <a href="barang.html">Rp. 18.000,00</a>
+              </div>
+            </div>
+          </div>
         </div>
-        
-            
-<!--  Scripts-->
-<script type="text/javascript">
-console.log("Uchiha Hana Nan");
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript"> 
+function myNavFunc(a, b){ 
+  // If it's an iPhone.. 
+  if( (navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1)) 
+  window.open("maps://maps.google.com/maps?daddr="+a+","+b+"&ll="); 
+  else 
+  window.open("http://maps.google.com/maps?daddr="+a+","+b+"&ll="); 
+} 
 </script>
+
+<!--  Scripts-->
+
 <script>
 
 function initMap() {
@@ -153,6 +144,15 @@ async defer></script>
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
+
+<center><h1>Jasa Antar</h1></center>
+		<form action="hasilrutekirim.php"method="post">
+			username          : <input type="text" name="username" required><br>
+			address user      : <input type="text" name="address" required><br>
+			address pengiriman: <input type="text" name="addresstuju" required><br>
+			
+			<input type="submit" name="submit" value="submit">
+		</form>
 
 </body>
 </html>

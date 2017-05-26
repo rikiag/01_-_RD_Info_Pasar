@@ -17,7 +17,7 @@
       <div class="col s12 m6 offset-m3">
         <div class="card ">
           <div class="card-content">
-            <span class="card-title black-text">Sign Up</span>
+            <span class="card-title black-text">Sign In</span>
             <form action="login.php" method="post">
               <div class='row'>
                 <div class='input-field col s12'>
@@ -32,7 +32,7 @@
                   <label for='password'>Password</label>
                 </div>
                 <label style='float: right;'>
-                  <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+                  <a class='pink-text' href='forgot.php'><b>Forgot Password?</b></a>
                 </label>
               </div>
               <center>
@@ -74,6 +74,7 @@
       session_start();
       $_SESSION['no_telp']  = $data->no_telp;
       $_SESSION['nama']     = $data->nama;
+      $_SESSION['foto']     = $data->foto;
       $_SESSION['alamat']   = $data->alamat;
       $_SESSION['level']    = $data->level;
       $_SESSION['id_pasar'] = $data->id_pasar;
