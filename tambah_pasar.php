@@ -237,7 +237,7 @@ if (isset($_POST['nama_pasar'])) {
 
   $sql=mysqli_query($con, "INSERT INTO `pasar`(`nama_pasar`, `alamat_pasar`, `lat`, `long`) VALUES ('$nama_pasar', '$alamat_pasar', '$latitude', '$longitude')");
   if($sql) { 
-    header('location:index.php');
+    echo '<script>window.location.assign("index.php")</script>';
   }
   else{
     echo "<script> alert('Gagal menambahkan pasar') </script>";
