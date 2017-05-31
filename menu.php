@@ -10,10 +10,12 @@ session_start();
       <?php if (isset($_SESSION['status'])): ?>
         <?php if (isset($_SESSION['no_telp'])): ?>
           <ul class="right hide-on-med-and-down">
-            <li><a class="dropdown-button" href="#!" data-activates="pages" ><?= $_SESSION['nama'] ?><i class="material-icons ag">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><?= $_SESSION['nama'] ?><i class="material-icons right">arrow_drop_down</i></a></li>
           </ul>
-          <ul id="pages" class="dropdown-content">
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="edit.php"><?= $_SESSION['nama'] ?></a></li>
             <li><a href="edit.php">Edit Profil</a></li>
+            <li class="divider"></li>
             <li><a href="logout.php">Logout</a></li>
           </ul>
         <?php endif; ?>
