@@ -14,6 +14,28 @@
 <?php include 'menu.php'; ?>
   <div class="container">
     <div class="section">
+      <?php if (isset($_SESSION['status'])): ?>
+      <div class="row">
+        <div class="card cyan lighten-5">
+          <div class="card-content cyan-text">
+            <p class="single-alert">
+              <b>Welcome <?= $_SESSION['nama']; ?></b>
+              <p>Anda telah login sebagai
+                <?php 
+                  if ($_SESSION['level'] == 1) {
+                    echo "Pedagang";
+                  }
+                  elseif ($_SESSION['level'] == 2) {
+                    echo "Pembeli";
+                  }else{
+                    echo "Jasa angkat barang";
+                  }
+                ?>
+            </p>
+          </div>
+        </div>
+      </div>
+      <?php endif; ?>
       <!--   Icon Section   -->
       <div class="row">
         <?php 
