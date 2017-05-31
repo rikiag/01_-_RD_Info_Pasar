@@ -18,6 +18,25 @@
         <div class="card cyan lighten-5">
           <div class="card-content">
           <p>Aplikasi ini dibuat untuk tugas proyek final pada mata kuliah Rekayasa Perangkat Lunak, Jurusan Informatika Universitas Syiah Kuala</p>
+          <hr>
+          <!-- Modal Trigger -->
+          <center>
+            <a class="waves-effect waves-light btn" href="#modal1">Kirim Masukan</a>
+          </center>
+
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <p>Bantu kami mengembangkan aplikasi dengan mengirimkan ide-ide unik anda.</p>
+              <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Masukan</label>
+              </div>
+            </div>
+            <div class="modal-footer center">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="Materialize.toast('Terima kasih. masukan anda sudah kami terima.', 5000)">Kirim</a>
+            </div>
+          </div>
           </div>
         </div>
         <ul class="collection">
