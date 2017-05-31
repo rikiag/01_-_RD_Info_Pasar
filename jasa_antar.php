@@ -19,9 +19,9 @@
         while($data = mysqli_fetch_object($sql)):
       ?>
       <li class="collection-item avatar">
-        <img src="<?= $data->foto ?>" alt="" class="circle">
-        <span class="title"><?= $data->nama ?></span>
-        <p><?= $data->alamat ?> <br><?= $data->no_telp ?></p>
+        <a href="profil.php?id=<?= $data->no_telp ?>"><img src="<?= $data->foto ?>" alt="" class="circle"></a>
+        <a href="profil.php?id=<?= $data->no_telp ?>"><span class="title"><?= $data->nama ?></span></a>
+        <a href="profil.php?id=<?= $data->no_telp ?>"><p><?= $data->alamat ?> <br><?= $data->no_telp ?></p></a>
         <a href="tel:<?= $data->no_telp ?>" class="secondary-content"><i class="material-icons">call</i></a>
       </li>
       <?php endwhile; ?>
