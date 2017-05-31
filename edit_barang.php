@@ -34,6 +34,12 @@
             </div>
             <div class="row">
               <div class="input-field col s12">
+                <input type="text" class="validate" name="stok_barang" value="<?= $row->stok_barang ?>">
+                <label >Stok</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
                 <input type="hidden" class="validate" name="harga_sebelumnya" value="<?= $row->harga_sekarang ?>">
                 <input type="text" class="validate" name="harga_sekarang" value="<?= $row->harga_sekarang ?>">
                 <label >Harga</label>
@@ -71,17 +77,18 @@
 
 <?php 
 if (isset($_POST['tambah'])) {
-  echo $nama   = $_POST['nama_barang'];
-  echo $harga  = $_POST['harga_sekarang'];
-  echo $harga_sebelumnya  = $_POST['harga_sebelumnya'];
-  echo $gambar = $_FILES["file_foto"]["name"];
+  $nama   = $_POST['nama_barang'];
+  $harga  = $_POST['harga_sekarang'];
+  $stok   = $_POST['stok_barang'];
+  $harga_sebelumnya  = $_POST['harga_sebelumnya'];
+  $gambar = $_FILES["file_foto"]["name"];
 
   $folder   = "images";
   $tmp_name = $_FILES["file_foto"]["tmp_name"];
   $name     = $folder."/".$_FILES["file_foto"]["name"];
   move_uploaded_file($tmp_name, $name);
 
-  $sql = mysqli_query($con, "UPDATE `barang` SET `nama_barang`='$nama', `foto_barang`='$gambar', `harga_sekarang`='$harga', `harga_sebelumnya`='$harga_sebelumnya' WHERE id_barang = $id");
+  $sql = mysqli_query($con, "UPDATE `barang` SET `nama_barang`='$nama', `foto_barang`='$gambar', `harga_sekarang`='$harga', `harga_sebelumnya`='$harga_sebelumnya', `stok_barang`='$stok' WHERE id_barang = $id");
   if ($sql) {
     header('location:barang_penjual.php');
   }

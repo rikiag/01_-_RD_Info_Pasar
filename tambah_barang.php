@@ -33,6 +33,12 @@
               </div>
             </div>
             <div class="row">
+              <div class="input-field col s12">
+                <input type="text" class="validate" name="stok_barang">
+                <label >Stok</label>
+              </div>
+            </div>
+            <div class="row">
               <div class="file-field input-field col s12">
                 <div class="btn">
                   <span>Foto</span>
@@ -65,6 +71,7 @@
 <?php 
 if (isset($_POST['tambah'])) {
   $nama   = $_POST['nama_barang'];
+  $stok   = $_POST['stok_barang'];
   $harga  = $_POST['harga_sekarang'];
   $gambar = $_FILES["file_foto"]["name"];
 
@@ -72,7 +79,7 @@ if (isset($_POST['tambah'])) {
   $tmp_name = $_FILES["file_foto"]["tmp_name"];
   $name     = $folder."/".$_FILES["file_foto"]["name"];
   move_uploaded_file($tmp_name, $name);
-  mysqli_query($con, "INSERT INTO `barang`(`nama_barang`, `foto_barang`, `harga_sekarang`) VALUES ('$nama','$gambar','$harga')");
+  mysqli_query($con, "INSERT INTO `barang`(`nama_barang`, `foto_barang`, `harga_sekarang`, `stok_barang`) VALUES ('$nama','$gambar','$harga','$stok')");
 
   $cek = mysqli_query($con, "SELECT * FROM barang ORDER BY `barang`.`id_barang` DESC");
   $data = mysqli_fetch_object($cek);

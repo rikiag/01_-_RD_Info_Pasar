@@ -47,7 +47,7 @@
           <div class="section">
             <div class="row">
               <?php
-              $sqlData = mysqli_query($con, "SELECT * FROM barang JOIN barang_user ON barang_user.id_barang = barang.id_barang JOIN user ON barang_user.no_telp = user.no_telp JOIN pasar ON pasar.id_pasar = user.id_pasar AND user.id_pasar = $id");
+              $sqlData = mysqli_query($con, "SELECT * FROM barang JOIN barang_user ON barang_user.id_barang = barang.id_barang JOIN user ON barang_user.no_telp = user.no_telp JOIN pasar ON pasar.id_pasar = user.id_pasar AND user.id_pasar = $id AND barang.stok_barang > 0");
               while ($data = mysqli_fetch_object($sqlData)):
                 ?>
               <div class="col s12 m6 l4">
