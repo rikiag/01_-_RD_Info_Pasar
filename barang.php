@@ -76,7 +76,7 @@ if (isset($_POST['action'])) {
   $komentar = $_POST['komentar'];
   $telp = $_SESSION['no_telp'];
   if ($sql = mysqli_query($con, "INSERT INTO `komentar`(`isi_komentar`, `id_barang`, `no_telp`) VALUES ('$komentar',$id,'$telp')")) {
-    header("Refresh:0; url=barang.php?id_barang=$id");
+    echo '<script>window.location.assign("barang.php?id_barang=$id")</script>';
   }
   else{
     echo "<script> alert('Gagal menamambah komentar') </script>";

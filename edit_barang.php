@@ -90,7 +90,7 @@ if (isset($_POST['tambah'])) {
 
   $sql = mysqli_query($con, "UPDATE `barang` SET `nama_barang`='$nama', `foto_barang`='$gambar', `harga_sekarang`='$harga', `harga_sebelumnya`='$harga_sebelumnya', `stok_barang`='$stok' WHERE id_barang = $id");
   if ($sql) {
-    header('location:barang_penjual.php');
+    echo '<script>window.location.assign("barang_penjual.php")</script>';
   }
   else{
     echo "<script>alert('Gagal mengedit barang')</script>";
