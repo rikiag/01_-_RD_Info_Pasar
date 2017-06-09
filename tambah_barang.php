@@ -13,7 +13,7 @@
 <body class="grey lighten-4">
   <?php include 'menu.php'; ?>
   <div class="row">
-    <div class="col s12 m7">
+    <div class="col s12 m6 offset-m3">
       <div class="card">
         <diw class="row">
           <center><h3>Tambah Barang</h3></center>

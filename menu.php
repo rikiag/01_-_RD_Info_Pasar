@@ -15,6 +15,9 @@ session_start();
           <ul id="dropdown1" class="dropdown-content">
             <li><a href="edit.php"><?= $_SESSION['nama'] ?></a></li>
             <li><a href="edit.php">Edit Profil</a></li>
+            <?php if ($_SESSION['level'] == 1): ?>
+              <li><a href="edit_pasar.php">Edit Pasar</a></li>
+            <?php endif ?>
             <li class="divider"></li>
             <li><a href="logout.php">Logout</a></li>
           </ul>
@@ -58,6 +61,7 @@ session_start();
       <?php if ($_SESSION['level'] == 1): ?>  
         <li><a class="waves-effect" href="barang_penjual.php">Barang Saya</a></li>
         <li><a class="waves-effect" href="tambah_barang.php">Tambah Barang</a></li>
+        <li><a class="waves-effect" href="edit_pasar.php">Edit Pasar</a></li>
       <?php endif ?>
       <?php if ($_SESSION['level'] == 2): ?>
         <li><a class="waves-effect" href="jasa_antar.php">Jasa Antar Barang</a></li>

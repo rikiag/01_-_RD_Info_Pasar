@@ -94,5 +94,7 @@ if (isset($_POST['no_telp'])) {
   move_uploaded_file($tmp_name, $name);
 
   mysqli_query($con, "INSERT INTO user (no_telp, nama, alamat, level, password, foto) VALUES ('$no_telp','$nama','$alamat','$level','$password', '$name')");
+  echo "<script>alert('Silahkan login untuk melanjutkan')</script>";
+  echo '<script>window.location.assign("login.php")</script>';
 }
 ?>

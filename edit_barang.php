@@ -19,7 +19,7 @@
     $row = $result -> fetch_object();
   ?>
   <div class="row">
-    <div class="col s12 m7">
+    <div class="col s12 m6 offset-m3">
       <div class="card">
         <diw class="row">
           <center><h3>Edit Barang</h3></center>

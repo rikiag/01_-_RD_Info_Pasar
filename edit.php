@@ -19,7 +19,7 @@
     $row = $result -> fetch_object();
   ?>
   <div class="row">
-    <div class="col s12 m7">
+    <div class="col s12 m6 offset-m3">
       <div class="card">
         <diw class="row">
           <center><h3>Edit Profil</h3></center>
@@ -93,7 +93,7 @@ if (isset($_POST['tambah'])) {
   $name     = $folder."/".$_FILES["file_foto"]["name"];
   move_uploaded_file($tmp_name, $name);
 
-  $sql = "UPDATE `user` SET `no_telp`='$no_telp',`nama`='$nama',`alamat`='$alamat',`foto`='$gambar',`password`='$password' WHERE no_telp = $id";
+  $sql = "UPDATE `user` SET `no_telp`='$no_telp',`nama`='$nama',`alamat`='$alamat',`foto`='images/$gambar',`password`='$password' WHERE no_telp = $id";
 
   if ($con->query($sql)) {
     echo "<script>alert('Silahkan login untuk melanjutkan')</script>";

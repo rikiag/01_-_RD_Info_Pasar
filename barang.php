@@ -27,7 +27,7 @@
         </div>
         <div class="card-content">
           <?php 
-          $sql = mysqli_query($con, "SELECT * FROM komentar JOIN user ON komentar.no_telp = user.no_telp WHERE komentar.id_barang = $id");
+          $sql = mysqli_query($con, "SELECT * FROM komentar JOIN user ON komentar.no_telp = user.no_telp WHERE komentar.id_barang = $id ORDER BY `komentar`.`id_komentar` DESC");
           while($data = mysqli_fetch_object($sql)):
             ?>
           <b><?= $data->nama; ?> :</b>
@@ -76,7 +76,7 @@ if (isset($_POST['action'])) {
   $komentar = $_POST['komentar'];
   $telp = $_SESSION['no_telp'];
   if ($sql = mysqli_query($con, "INSERT INTO `komentar`(`isi_komentar`, `id_barang`, `no_telp`) VALUES ('$komentar',$id,'$telp')")) {
-    echo '<script>window.location.assign("barang.php?id_barang=$id")</script>';
+    echo '<script>window.location.assign("barang.php?id_barang='.$id.'")</script>';
   }
   else{
     echo "<script> alert('Gagal menamambah komentar') </script>";
