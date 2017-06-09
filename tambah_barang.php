@@ -85,7 +85,7 @@ if (isset($_POST['tambah'])) {
   $data = mysqli_fetch_object($cek);
 
   if (mysqli_query($con, "INSERT INTO `barang_user`(`no_telp`, `id_barang`) VALUES ('".$_SESSION['no_telp']."','".$data->id_barang."')")) {
-    echo '<script>window.location.assign("barang_penjual.php")</script>';
+    header('location:barang_penjual.php');
   }
   else{
     echo "<script>alert('gagal menambahkan barang')</script>";
