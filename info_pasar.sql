@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 31 Mei 2017 pada 07.46
+-- Generation Time: 28 Jul 2017 pada 16.24
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -45,8 +45,8 @@ INSERT INTO `barang` (`id_barang`, `nama_barang`, `stok_barang`, `foto_barang`, 
 (3, 'cabai hijau', 100, 'cabai-hijau-1.jpg', 5500, 5000),
 (4, 'telur', 100, 'telur.jpg', 1500, 0),
 (5, 'ayam', 100, 'ayam-potong.jpg', 45000, 0),
-(11, 'bayam', 2, '1d9487d11f11683c394ff9d83a1ef123_t.jpg', 2500, 2500),
-(13, 'keju kraft', 100, 'keju kraft.jpg', 15000, 0);
+(13, 'keju kraft', 100, 'keju kraft.jpg', 15000, 0),
+(14, 'coba', 1, '11.bmp', 10000, 10000);
 
 -- --------------------------------------------------------
 
@@ -65,12 +65,12 @@ CREATE TABLE `barang_user` (
 
 INSERT INTO `barang_user` (`no_telp`, `id_barang`) VALUES
 ('08123', 3),
-('08123', 11),
 ('08123', 13),
 ('08123', 4),
 ('08123', 5),
 ('0822', 2),
-('0822', 1);
+('0822', 1),
+('08123', 14);
 
 -- --------------------------------------------------------
 
@@ -97,7 +97,10 @@ INSERT INTO `komentar` (`id_komentar`, `isi_komentar`, `id_barang`, `no_telp`) V
 (7, 'yoo, whats up ??', 2, '0822'),
 (13, 'ini foto cabe rawit, bukan cabe merah.', 3, '0822'),
 (14, 'mungkin dia lelah', 3, '08123'),
-(15, 'fotonya tidak sesuai, harganya terlalu rendah. meragukan. hmmm', 3, '1234');
+(15, 'fotonya tidak sesuai, harganya terlalu rendah. meragukan. hmmm', 3, '1234'),
+(21, 'ini baru foto yg bener.', 1, '1234'),
+(24, 'kdfjhnkdjf', 13, '1234'),
+(25, 'apa bilang', 13, '0822');
 
 -- --------------------------------------------------------
 
@@ -119,7 +122,8 @@ CREATE TABLE `pasar` (
 
 INSERT INTO `pasar` (`id_pasar`, `nama_pasar`, `alamat_pasar`, `lat`, `long`) VALUES
 (1, 'Pasar Tradisional Rukoh', 'Rukoh, Syiah Kuala, Kota Banda Aceh, Aceh 24415', '5.575377', '95.360449'),
-(2, 'Pasar Sayur Lamnyong', 'Jl. Teuku Nyak Arief No.23, Lamgugob, Syiah Kuala, Kota Banda Aceh, Aceh 24415, Indonesia', '5.57559263', '95.3544724');
+(2, 'Pasar Sayur Lamnyong', 'Jl. Teuku Nyak Arief No.23, Lamgugob, Syiah Kuala, Kota Banda Aceh, Aceh 24415, Indonesia', '5.57559263', '95.3544724'),
+(4, 'Pasar Peunayong', 'Jl. Sri Ratu Syafiatuddin, Peunayong, Kuta Alam, Kota Banda Aceh, Aceh 24415, Indonesia', '5.56695759', '95.3669472');
 
 -- --------------------------------------------------------
 
@@ -142,11 +146,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`no_telp`, `nama`, `alamat`, `foto`, `level`, `password`, `id_pasar`) VALUES
-('08123', 'Riki Agusnaidi', 'rukoh', 'images/naruto_shippuden_sasuke.png', 1, '08123', 1),
+('08123', 'Riki', 'rukoh', 'images/sample.png', 1, '08123', 1),
 ('0822', 'Ilham', 'Banda Aceh', 'images/naruto_shippuden_sasuke.png', 1, '0822', 2),
+('1', 'kdkjfh', 'dkjfh', 'images/sample.png', 1, '1', 4),
 ('1234', 'yusran', 'peurada', 'images/BLS-01.jpg', 2, '1234', 0),
 ('45', 'andre', 'rukoh', 'images/naruto_shippuden_sasuke.png', 3, '45', 0),
-('456', 'No name', 'Darussalam', 'images/wallpapers.jpg', 3, '456', 0);
+('456', 'No name', 'Darussalam', 'images/sample.png', 3, '456', 0);
 
 --
 -- Indexes for dumped tables
@@ -194,17 +199,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
-  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `pasar`
 --
 ALTER TABLE `pasar`
-  MODIFY `id_pasar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pasar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
